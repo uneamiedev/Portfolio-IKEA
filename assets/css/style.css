@@ -1,0 +1,301 @@
+/**************************************************************************
+*	            	            General	   			                      *
+***************************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.8rem;
+    color: #171717;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.wrapped {
+    width: 95%;
+    max-width: 1170px;
+    margin: auto;
+}
+@media all and (min-width: 768px) {
+    .wrapped {
+        width: 75%;
+    }
+}
+@media all and (min-width: 1280px) {
+    .wrapped {
+        width: 65%;
+    }
+}
+  
+/**************************************************************************
+*		                      Typography                	   		      *
+***************************************************************************/
+.title {
+    font-size: 2.4rem;
+    text-align: left;
+}
+
+.subtitle {
+    margin-top: 1rem;
+    text-align: left;
+    line-height: 1.2;
+}
+  
+/**************************************************************************
+*								Global			    					  *
+***************************************************************************/
+.is-hidden {
+    display: none !important;
+}
+
+
+/*** Header ******************************/
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 3.2rem 0 1rem;
+}
+
+.header .logo {
+    font-size: 1.8rem;
+}
+  
+/*** Main ********************************/
+.main {
+    height: 100%;
+}
+  
+/*** Sections ****************************/
+.section {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.section .title {
+    background-color: transparent;
+    padding-top: 6.8rem;
+}
+
+.section .wrapped {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+}
+  
+.section--intro .wrapped {
+    height: 100%;
+}
+
+.section--intro .year {
+    font-size: 9.6rem;
+    color: #ee209c;
+    line-height: 4;
+    text-align: center;
+    -webkit-animation: color-change 2500ms 1;
+            animation: color-change 2500ms 1;
+}
+
+@-webkit-keyframes color-change {
+    0% {
+      color: #ee209c;
+    }
+    20% {
+      color: #ffc411;
+    }
+    40% {
+      color: #ffffff;
+    }
+    60% {
+      color: #52c2db;
+    }
+    80% {
+      color: #fa630e;
+    }
+    100% {
+      color: #ee209c;
+    }
+}
+
+@keyframes color-change {
+    0% {
+      color: #ee209c;
+    }
+    20% {
+      color: #ffc411;
+    }
+    40% {
+      color: #ffffff;
+    }
+    60% {
+      color: #52c2db;
+    }
+    80% {
+      color: #fa630e;
+    }
+    100% {
+      color: #ee209c;
+    }
+}
+
+.section--intro .intro-text {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+    margin-top: -4.8rem;
+    font-size: 3.6rem;
+    line-height: 1.5;
+    cursor: default;
+}
+
+.section--intro .intro-text p {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+}
+
+.section--intro .intro-text p:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
+
+@media all and (min-width: 768px) {
+    .section--intro .intro-text p {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-flow: row wrap;
+      -webkit-box-pack: center;
+              justify-content: center;
+    }
+    .section--intro .intro-text p span:not(:last-child) {
+      margin-right: 0.3em;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .section--intro .intro-text {
+      font-size: 4.8rem;
+    }
+}
+
+@media all and (min-width: 850px) and (max-width: 945px) {
+    .section--intro .intro-text {
+      width: 90%;
+      margin: auto;
+    }
+}
+
+.section--intro .btn.btn--cta {
+    position: fixed;
+    left: calc((100% - 220px)/2);
+    bottom: 4.8rem;
+    min-width: 220px;
+}
+  
+/*** Buttons *****************************/
+button {
+    border: none;
+    background-color: transparent;
+}
+
+button:focus {
+    outline: 0;
+}
+  
+.btn {
+    text-transform: uppercase;
+    font-family: "DM Sans", sans-serif;
+    border: none;
+}
+
+.btn--cta {
+    border-radius: 3em;
+    padding: 0.5em 1.5em;
+    font-size: 2.4rem;
+    color: #000000;
+    background-color: #ee209c;
+}
+
+.btn--cta:hover {
+    color: #ffc411;
+}
+  
+/*** Slick dots **************************/
+.slick-dots {
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    max-width: 30%;
+    margin: 1rem auto 0;
+}
+
+.slick-dots li {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #ee209c;
+    border-radius: 50%;
+    color: #ee209c;
+    background-color: #ee209c;
+}
+
+.slick-dots li button {
+    color: transparent;
+    background-color: transparent;
+}
+  
+/*** Backgrounds *************************/
+.bg-primary {
+    background-color: #ee209c;
+}
+
+.bg-secondary {
+    background-color: #ffc411;
+}
+
+.bg-tertiary {
+    background-color: #52c2db;
+}
+
+.bg-quaternary {
+    background-color: #fa630e;
+}
+  
+/*** Text colors *************************/
+.text-light {
+    color: #ffffff;
+}
+
+.text-primary {
+    color: #ee209c;
+}
+
+.text-secondary {
+    color: #ffc411;
+}
+
+.text-tertiary {
+    color: #52c2db;
+}
+
+.text-quaternary {
+    color: #fa630e;
+}
